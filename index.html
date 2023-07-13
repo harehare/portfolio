@@ -1,0 +1,83 @@
+<html>
+  <head>
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://assets.ubuntu.com" crossorigin />
+    <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://assets.ubuntu.com/v1/vanilla-framework-version-4.0.0.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css"
+    />
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        color: #f7f7f7;
+        background-color: #262626;
+        font-family: "Ubuntu", apple-system, BlinkMacSystemFont, Helvetica Neue,
+          Hiragino Kaku Gothic ProN, 游ゴシック Medium, YuGothic;
+      }
+
+      .header {
+        font-size: 2rem;
+        padding: 8px;
+        font-weight: 600;
+        line-height: 1.5rem;
+      }
+
+      .p-tabs__link:active::before,
+      .p-tabs__link[aria-selected="true"]::before {
+        background-color: rgba(0, 0, 0, 0);
+      }
+
+      @keyframes loading-anim {
+        0% {
+          opacity: 0;
+        }
+        20% {
+          opacity: 0;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0;
+        }
+      }
+
+      .loading {
+        animation: loading-anim 2.5s linear 0s infinite normal;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <div
+        class="loading"
+        style="
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+        "
+      >
+        Loading...
+      </div>
+    </div>
+    <script src="/vdom/python-wasm-vdom.js"></script>
+    <script type="text/python" src="/portfolio.py"></script>
+  </body>
+</html>

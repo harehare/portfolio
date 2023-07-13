@@ -1,0 +1,3 @@
+[submodule "vdom"]
+	path = vdom
+	url = https://github.com/harehare/python-wasm-vdom.git
