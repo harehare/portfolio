@@ -2,7 +2,7 @@
 import js
 import sys
 
-sys.path.append("vdom/src/")
+sys.path.append("vdom")
 
 import json
 import operator
