@@ -304,32 +304,15 @@ def home_view() -> VDom:
                         "div",
                         {
                             "class": "p-heading--1",
-                            "style": "padding-top: 24px; margin-bottom: 0;",
+                            "style": "padding-top: 24px; margin-bottom: 0; font-weight: 800;",
                         },
                         ["Hello, I'm Takahiro Sato"],
                     ),
                     # description
                     p(
                         "div",
-                        {"class": "p-heading--6", "style": f"color: {SECONDARY_COLOR}"},
+                        {"class": "p-heading--6", "style": f"color: {PRIMARY_COLOR}"},
                         ["Web developer living in Saitama, Japan."],
-                    ),
-                    # icon
-                    p(
-                        "div",
-                        {
-                            "style": "display: flex; align-items: center; justify-content: center;"
-                        },
-                        [
-                            p(
-                                "img",
-                                {
-                                    "src": "https://avatars3.githubusercontent.com/u/533078?s=460&v=4",
-                                    "style": "border-radius: 100%; width: 192px;",
-                                },
-                                [],
-                            )
-                        ],
                     ),
                 ],
             ),
@@ -403,6 +386,7 @@ def works_view(s: State) -> VDom:
                                                 {
                                                     "class": "p-matrix__link",
                                                     "href": item["html_url"],
+                                                    "style": "font-weight: 800;",
                                                     "target": "_blank",
                                                     "rel": "noopener noreferrer",
                                                 },
@@ -410,7 +394,7 @@ def works_view(s: State) -> VDom:
                                             ),
                                             p(
                                                 "div",
-                                                {"class": "p-matrix__desc"},
+                                                {"class": "p-matrix__desc", "style": "font-size: 0.8rem;"},
                                                 [p("p", {}, [item["description"]])],
                                             ),
                                         ],
@@ -474,9 +458,9 @@ def tab_view(s: State, tab_index: int, icon: str, text: str, action) -> VDom:
             p(
                 "span",
                 {
-                    "style": f"background-color: #262626; color: {PRIMARY_COLOR}"
+                    "style": f"font-size: 0.8rem; font-weight: 800; background-color: #262626; color: {PRIMARY_COLOR}"
                     if selected
-                    else "background-color: #262626; color: #3d4047"
+                    else "font-size: 0.8rem; font-weight: 800; background-color: #262626; color: #3d4047"
                 },
                 [text],
             ),
