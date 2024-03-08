@@ -446,9 +446,9 @@ def tab_view(s: State, tab_index: int, icon: str, text: str, action) -> VDom:
                 {
                     "class": "material-icons p-tabs__link",
                     "style": (
-                        f"background-color: #262626; color: {PRIMARY_COLOR}"
+                        f"font-size: 0.9rem; background-color: #262626; color: {PRIMARY_COLOR}"
                         if selected
-                        else "background-color: #262626; color: #3d4047"
+                        else "font-size: 0.9rem; background-color: #262626; color: #3d4047"
                     )
                     + "; margin: 0; padding: 12px 8px 0 0;",
                     "aria-selected": "true" if selected else "false",
@@ -522,11 +522,11 @@ def tabs_view(s: State, a: Actions) -> VDom:
                     ),
                     link_view(
                         f"https://github.com/{GITHUB}",
-                        p("i", {"class": "devicon-github-original"}, []),
+                        p("i", {"class": "devicon-github-original", "style": "font-size: 0.9rem;"}, []),
                     ),
                     link_view(
                         f"mailto:{GMAIL}",
-                        p("span", {"class": "material-icons"}, ["mail"]),
+                        p("span", {"class": "material-icons", "style": "font-size: 0.9rem;"}, ["mail"]),
                     ),
                 ],
             )
